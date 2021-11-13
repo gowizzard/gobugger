@@ -1,6 +1,6 @@
 # gobugger
 
-[![GitHub go.mod Go version of a Go module](https://img.shields.io/github/go-mod/go-version/gowizzard/gobugger.svg)](https://golang.org/) [![Go](https://github.com/gowizzard/gobugger/actions/workflows/go.yml/badge.svg)](https://github.com/gowizzard/gobugger/actions/workflows/go.yml) [![Go Reference](https://pkg.go.dev/badge/github.com/gowizzard/gobugger.svg)](https://pkg.go.dev/github.com/gowizzard/gobugger) ![Lines of code](https://img.shields.io/tokei/lines/github/gowizzard/gobugger) [![Developed with <3](https://img.shields.io/badge/Developed%20with-%3C3-19ABFF)](https://gowizzard/)
+[![GitHub go.mod Go version of a Go module](https://img.shields.io/github/go-mod/go-version/gowizzard/gobugger.svg)](https://golang.org/) [![Go](https://github.com/gowizzard/gobugger/actions/workflows/go.yml/badge.svg)](https://github.com/gowizzard/gobugger/actions/workflows/go.yml) [![Go Report Card](https://goreportcard.com/badge/github.com/gowizzard/gobugger)](https://goreportcard.com/report/github.com/gowizzard/gobugger) [![Go Reference](https://pkg.go.dev/badge/github.com/gowizzard/gobugger.svg)](https://pkg.go.dev/github.com/gowizzard/gobugger) ![Lines of code](https://img.shields.io/tokei/lines/github/gowizzard/gobugger) [![Developed with <3](https://img.shields.io/badge/Developed%20with-%3C3-19ABFF)](https://gowizzard/)
 
 With this small library it should be possible to debug easier in json files. Instead of always using the console. For large amounts of data and in general this is not the right tool.
 
