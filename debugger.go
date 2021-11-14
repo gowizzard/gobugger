@@ -19,6 +19,7 @@ import (
 
 // Config is to save the config for debugger
 type Config struct {
+	Prefix     string
 	Path       string
 	DebugStart time.Time
 	DebugEnd   time.Time
@@ -28,6 +29,7 @@ type Config struct {
 // Output is to save the output
 type Output struct {
 	Debugger string        `json:"debugger"`
+	Prefix   string        `json:"prefix"`
 	Start    time.Time     `json:"start"`
 	End      time.Time     `json:"end"`
 	Data     []interface{} `json:"data"`
@@ -55,9 +57,15 @@ func (c *Config) End() error {
 	// Set end time
 	c.DebugEnd = time.Now()
 
+	// Check prefix length
+	if len(c.Prefix) == 0 {
+		c.Prefix = "gobugger"
+	}
+
 	// Create debug information
 	output := Output{
 		Debugger: "gobugger",
+		Prefix:   c.Prefix,
 		Start:    c.DebugStart,
 		End:      c.DebugStart,
 		Data:     c.DebugData,
@@ -76,7 +84,7 @@ func (c *Config) End() error {
 	}
 
 	// Create file path
-	file := fmt.Sprintf("%s/gobugger-%s.json", path, c.DebugStart.Format("2006-01-02T15:04:05"))
+	file := fmt.Sprintf("%s/%s-%s.json", path, c.Prefix, c.DebugStart.Format("2006-01-02T15:04:05"))
 
 	// Write file
 	err = ioutil.WriteFile(file, convert, 0644)

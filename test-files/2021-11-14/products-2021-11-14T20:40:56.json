@@ -1,0 +1,32 @@
+{
+    "debugger": "gobugger",
+    "prefix": "products",
+    "start": "2021-11-14T20:40:56.977276+01:00",
+    "end": "2021-11-14T20:40:56.977276+01:00",
+    "data": [
+        {
+            "Color": "Canyon Gold Oversize Tartan",
+            "Description": "Mit seinem traditionellen Karomuster, dem klassischen Kragen und den langen Ärmeln bringt dir dieses Hemd einen Casual-Look.",
+            "Name": "Outdoor Elements™ II Flannel Shirt für Männer",
+            "Price": "79,99",
+            "Size": "XL",
+            "Sku": "outdoor-elements-ii-flannel-shirt-fur-manner-1959661"
+        },
+        [
+            "Outdoor Elements™ II Flannel Shirt für Männer",
+            "outdoor-elements-ii-flannel-shirt-fur-manner-1959661",
+            "79,99",
+            "Canyon Gold Oversize Tartan",
+            "XL",
+            "Mit seinem traditionellen Karomuster, dem klassischen Kragen und den langen Ärmeln bringt dir dieses Hemd einen Casual-Look."
+        ],
+        {
+            "name": "Outdoor Elements™ II Flannel Shirt für Männer",
+            "sku": "outdoor-elements-ii-flannel-shirt-fur-manner-1959661",
+            "price": "79,99",
+            "color": "Canyon Gold Oversize Tartan",
+            "size": "XL",
+            "description": "Mit seinem traditionellen Karomuster, dem klassischen Kragen und den langen Ärmeln bringt dir dieses Hemd einen Casual-Look."
+        }
+    ]
+}
