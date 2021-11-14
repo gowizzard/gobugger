@@ -27,7 +27,8 @@ func Test(t *testing.T) {
 
 	// Create new debugger
 	c := Config{
-		Path: "/Users/jonaskwiedor/Downloads",
+		Prefix: "products",
+		Path:   "test-files",
 	}
 
 	// Start debugger
