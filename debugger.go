@@ -64,7 +64,7 @@ func (c *Config) End() error {
 	}
 
 	// Create path
-	path := fmt.Sprintf("%s/%s/%s", c.Path, c.DebugStart.Format("2006-01"), c.DebugStart.Format("02"))
+	path := fmt.Sprintf("%s/%s", c.Path, c.DebugStart.Format("2006-01-02"))
 
 	// Create folder
 	os.Mkdir(path, os.ModePerm)
