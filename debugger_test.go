@@ -12,6 +12,7 @@ package gobugger
 import (
 	"fmt"
 	"testing"
+	"time"
 )
 
 type TestStruct struct {
@@ -27,8 +28,7 @@ func Test(t *testing.T) {
 
 	// Create new debugger
 	c := Config{
-		Prefix: "products",
-		Path:   "test-files",
+		Path: "test-files",
 	}
 
 	// Start debugger
@@ -58,6 +58,8 @@ func Test(t *testing.T) {
 
 	c.Add(testDataArray)
 
+	time.Sleep(1 * time.Second)
+
 	// Add test data with a struct
 	testDataStruct := TestStruct{
 		Name:        "Outdoor Elements™ II Flannel Shirt für Männer",
@@ -69,6 +71,8 @@ func Test(t *testing.T) {
 	}
 
 	c.Add(testDataStruct)
+
+	time.Sleep(1 * time.Second)
 
 	// End debugger
 	err := c.End()
