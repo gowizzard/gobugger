@@ -84,7 +84,7 @@ func (c *Config) End() error {
 	}
 
 	// Create file path
-	file := fmt.Sprintf("%s/%s-%s.json", path, c.Prefix, c.DebugStart.Format("2006-01-02T15-04-05"))
+	file := fmt.Sprintf("%s/%s-%s.json", path, c.Prefix, c.DebugStart.Format("20060102T150405"))
 
 	// Write file
 	err = ioutil.WriteFile(file, convert, 0644)
