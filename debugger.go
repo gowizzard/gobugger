@@ -67,7 +67,7 @@ func (c *Config) End() error {
 		Debugger: "gobugger",
 		Prefix:   c.Prefix,
 		Start:    c.DebugStart,
-		End:      c.DebugStart,
+		End:      c.DebugEnd,
 		Data:     c.DebugData,
 	}
 
