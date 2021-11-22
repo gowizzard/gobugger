@@ -20,12 +20,12 @@ Here you will find an example:
 
 ```go
 // Create new debugger
-c := gobugger.Config{
+debugger := gobugger.Config{
     Path: "/Users/jonaskwiedor/Downloads",
 }
 
 // Start debugger
-c.Start()
+debugger.Start()
 
 // Add test data with a struct
 testDataStruct := TestStruct{
@@ -37,10 +37,10 @@ testDataStruct := TestStruct{
     Description: "Mit seinem traditionellen Karomuster, dem klassischen Kragen und den langen Ärmeln bringt dir dieses Hemd einen Casual-Look.",
 }
 
-c.Add(testDataStruct)
+debugger.Add(testDataStruct)
 
 // End debugger
-err := c.End()
+err := debugger.End()
 if err != nil {
     fmt.Println(err)
 }
@@ -70,12 +70,12 @@ The nice thing is that you can also debug a wide variety of data types. Here is 
 
 ```go
 // Create new debugger
-c := gobugger.Config{
+debugger := gobugger.Config{
     Path: "/Users/jonaskwiedor/Downloads",
 }
 
 // Start debugger
-c.Start()
+debugger.Start()
 
 // Add test data with a map
 testDataMap := make(map[string]interface{})
@@ -87,7 +87,7 @@ testDataMap["Color"] = "Canyon Gold Oversize Tartan"
 testDataMap["Size"] = "XL"
 testDataMap["Description"] = "Mit seinem traditionellen Karomuster, dem klassischen Kragen und den langen Ärmeln bringt dir dieses Hemd einen Casual-Look."
 
-c.Add(testDataMap)
+debugger.Add(testDataMap)
 
 // Add test data with an array
 testDataArray := []string{
@@ -99,7 +99,7 @@ testDataArray := []string{
     "Mit seinem traditionellen Karomuster, dem klassischen Kragen und den langen Ärmeln bringt dir dieses Hemd einen Casual-Look.",
 }
 
-c.Add(testDataArray)
+debugger.Add(testDataArray)
 
 // Add test data with a struct
 testDataStruct := TestStruct{
@@ -111,10 +111,10 @@ testDataStruct := TestStruct{
     Description: "Mit seinem traditionellen Karomuster, dem klassischen Kragen und den langen Ärmeln bringt dir dieses Hemd einen Casual-Look.",
 }
 
-c.Add(testDataStruct)
+debugger.Add(testDataStruct)
 
 // End debugger
-err := c.End()
+err := debugger.End()
 if err != nil {
     fmt.Println(err)
 }
