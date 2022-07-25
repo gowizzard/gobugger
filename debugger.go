@@ -36,7 +36,8 @@ func (c *Config) Add(debugData interface{}) {
 	c.DebugData = append(c.DebugData, debugData)
 }
 
-// End is to set the debug end date, format the output data and write the date in a json file.
+// End is to set the debug end date, format the output data
+// And write the date in a json file
 func (c *Config) End() error {
 
 	c.DebugEnd = time.Now()

@@ -9,8 +9,8 @@ const (
 	path = "/home/user/path/to/folder"
 )
 
-// Test is to test the debugger function.
-// We add a map with test data into the debugger.
+// Test is to test the debugger function
+// We add a map with test data into the debugger
 func Test(t *testing.T) {
 
 	c := Config{
