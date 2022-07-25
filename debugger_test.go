@@ -1,40 +1,24 @@
-//********************************************************************************************************************//
-//
-// This file is part of gobugger.
-// All code may be used. Feel free and maybe code something better.
-//
-// Author: Jonas Kwiedor (aka gowizzard)
-//
-//********************************************************************************************************************//
-
 package gobugger
 
 import (
-	"fmt"
+	"log"
 	"testing"
-	"time"
 )
 
-type TestStruct struct {
-	Name        string `json:"name"`
-	Sku         string `json:"sku"`
-	Price       string `json:"price"`
-	Color       string `json:"color"`
-	Size        string `json:"size"`
-	Description string `json:"description"`
-}
+const (
+	path = "/home/user/path/to/folder"
+)
 
+// Test is to test the debugger function.
+// We add a map with test data into the debugger.
 func Test(t *testing.T) {
 
-	// Create new debugger
 	c := Config{
-		Path: "test-files",
+		Path: path,
 	}
 
-	// Start debugger
 	c.Start()
 
-	// Add test data with a map
 	testDataMap := make(map[string]interface{})
 
 	testDataMap["Name"] = "Outdoor Elements™ II Flannel Shirt für Männer"
@@ -46,38 +30,9 @@ func Test(t *testing.T) {
 
 	c.Add(testDataMap)
 
-	// Add test data with an array
-	testDataArray := []string{
-		"Outdoor Elements™ II Flannel Shirt für Männer",
-		"outdoor-elements-ii-flannel-shirt-fur-manner-1959661",
-		"79,99",
-		"Canyon Gold Oversize Tartan",
-		"XL",
-		"Mit seinem traditionellen Karomuster, dem klassischen Kragen und den langen Ärmeln bringt dir dieses Hemd einen Casual-Look.",
-	}
-
-	c.Add(testDataArray)
-
-	time.Sleep(1 * time.Second)
-
-	// Add test data with a struct
-	testDataStruct := TestStruct{
-		Name:        "Outdoor Elements™ II Flannel Shirt für Männer",
-		Sku:         "outdoor-elements-ii-flannel-shirt-fur-manner-1959661",
-		Price:       "79,99",
-		Color:       "Canyon Gold Oversize Tartan",
-		Size:        "XL",
-		Description: "Mit seinem traditionellen Karomuster, dem klassischen Kragen und den langen Ärmeln bringt dir dieses Hemd einen Casual-Look.",
-	}
-
-	c.Add(testDataStruct)
-
-	time.Sleep(1 * time.Second)
-
-	// End debugger
 	err := c.End()
 	if err != nil {
-		fmt.Println(err)
+		log.Fatalln(err)
 	}
 
 }
