@@ -3,7 +3,6 @@ package gobugger
 import (
 	"encoding/json"
 	"fmt"
-	"io/ioutil"
 	"os"
 	"time"
 )
@@ -60,7 +59,7 @@ func (c *Config) End() error {
 
 	file := fmt.Sprintf("%s/%s-%s.json", path, c.Prefix, c.DebugStart.Format("20060102T150405"))
 
-	err = ioutil.WriteFile(file, convert, 0644)
+	err = os.WriteFile(file, convert, 0644)
 	if err != nil {
 		return err
 	}
